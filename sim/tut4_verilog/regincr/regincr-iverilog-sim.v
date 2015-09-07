@@ -2,7 +2,7 @@
 // RegIncr Ad-Hoc Testing
 //========================================================================
 
-`include "../tut4_verilog/regincr/RegIncr.v"
+`include "../sim/tut4_verilog/regincr/RegIncr.v"
 
 module top;
 
@@ -21,6 +21,14 @@ module top;
   // This simulator script is incomplete. As part of the tutorial you
   // will need to instantiate and connect a RegIncr model here.
   // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+  tut4_verilog_regincr_RegIncr reg_incr
+  (
+    .clk    (clk),
+    .reset  (reset),
+    .in     (in),
+    .out    (out)
+  );
 
   // Verify functionality
 
